@@ -4,31 +4,59 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+function crazySum(num1, num2) {
+    return num1 === num2 ? `Dato che i due numeri sono uguali allora la somma dei due numeri moltiplicata per 3 è ${(num1 + num2) * 3}` : `La somma dei due numeri è ${somma = num1 + num2}`;
+}
+// alert(crazySum(parseInt(prompt("ESERCIZIO 1\nDammi il primo numero")), parseInt(prompt("ESERCIZIO 1\nDammi il secondo numero"))));
 
 /* ESERCIZIO 2
  Scrivi una funzione chiamata "boundary", che accetta un numero intero come parametro e ritorna true se tale parametro è incluso tra 20 e 100 (incluso) o se è esattamente uguale a 400.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+function boundary(numBound) {
+    return (numBound >= 20 && numBound <= 400) || numBound === 400 ? true : false;
+}
+// alert(boundary(parseInt(prompt("ESERCIZIO 2\nDammi un numero possibilmente compreso tra 20 e 100 oppure uguale 400"))));
 /* ESERCIZIO 3
  Scrivi una funzione chiamata "reverseString", che accetta una stringa come parametro e la ritorna invertita (es.: EPICODE => EDOCIPE).
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+function reverseString(str) {
+    let inverted = ""
+    for (let i = str.length; i >= 0; i--) {
+        inverted += str.charAt(i);
+    }
+    return `Il testo invertito è ${inverted}`;
+}
+// alert(reverseString(prompt("ESERCIZIO 3\nDammi del testo")));
 /* ESERCIZIO 4
  Scrivi una funzione chiamata "upperFirst", che accetta una stringa come parametro e la ritorna rendendo maiuscola ogni lettera iniziale di ogni parola.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+function upperFirst(str) {
+    let upFirst = "";
+    for (let i = 0; i < str.length; i++) {
+        i === 0 || str.charAt(i - 1) === " " ? upFirst += str.charAt(i).toUpperCase() : upFirst += str.charAt(i);
+    }
+    return `La tua stringa con ogni iniziale maiuscola diventa\n${upFirst}`;
+}
+// alert(upperFirst(prompt("ESERCIZIO 4\nDammi una stringa")));
 /* ESERCIZIO 5
  Scrivi una funzione chiamata "giveMeRandom", che accetta come parametro un numero chiamato n e ritorna un array contenente n numeri random contenuti tra 0 e 10.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+function giveMeRandom(n) {
+    let random = [];
+    for (let i = 0; i < n; i++) {
+        random.push(Math.round(Math.random() * 10) + 1);
+    }
+    return `I tuoi ${n} numeri casuali sono : ${random}`;
+}
+alert(giveMeRandom(parseInt(prompt("ESERCIZIO 5\nDimmi quanti numeri casuali devo estrarre"))));
 //EXTRA:
 /* ESERCIZIO 1
  Scrivi una funzione chiamata "area" che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
